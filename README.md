@@ -1,5 +1,5 @@
-<p>This is the main repository for the assignment.</p>
-<p>It will contain the following environment branches:</p>
+<p>Important announcement for team members!</p>
+<p>Current project contains the following environment branches:</p>
 <ul>
 	<li>carpark (Himantha + Harshini)</li>
 	<li>entry (Himantha)</li>
