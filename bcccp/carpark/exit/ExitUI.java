@@ -1,15 +1,15 @@
-package bcccp.carpark.exit;
+ package bcccp.carpark.exit;
 
-import java.awt.EventQueue;
+ import java.awt.EventQueue;
 
-import javax.swing.JFrame;
-import javax.swing.JPanel;
-import javax.swing.border.EmptyBorder;
-import javax.swing.border.TitledBorder;
+ import javax.swing.JFrame;
+ import javax.swing.JPanel;
+ import javax.swing.border.EmptyBorder;
+ import javax.swing.border.TitledBorder;
 
-import javax.swing.JTextField;
-import java.awt.Font;
-import java.awt.Toolkit;
+ import javax.swing.JTextField;
+ import java.awt.Font;
+ import java.awt.Toolkit;
 
 import javax.swing.SwingConstants;
 import javax.swing.JButton;
