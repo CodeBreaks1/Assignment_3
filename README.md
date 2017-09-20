@@ -1,1 +1,1 @@
-<p>This branch will pull integration branch, where all unit test, integration tests will be conducted</p>
+<p>This branch will pull integration branch, where all unit test, integration tests and uat tests will be conducted</p>
