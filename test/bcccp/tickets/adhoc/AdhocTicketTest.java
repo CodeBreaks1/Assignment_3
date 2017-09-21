@@ -139,4 +139,28 @@ class AdhocTicketTest {
         when(testAdhoc.hasExited()).thenReturn(true);
         assertTrue(testAdhoc.hasExited());
     }
+    // support methods
+
+    static String generateBarCode(int ticketNum, String entryDate) {
+
+        String prefix = "0041"; // hex representation of "A". Unicode: U+0041
+
+        String hexNum = Integer.toHexString(ticketNum);
+
+        String hexDate = null;
+        try {
+            hexDate = toHexadecimal(entryDate);
+        } catch (UnsupportedEncodingException e) {
+            e.printStackTrace();
+        }
+
+        return prefix + "\u002D" + hexNum + "\u002D" + hexDate;
+    }
+
+
+    static String toHexadecimal(String text) throws UnsupportedEncodingException {
+        byte[] myBytes = text.getBytes("UTF-16");
+
+        return DatatypeConverter.printHexBinary(myBytes);
+    }
 }
