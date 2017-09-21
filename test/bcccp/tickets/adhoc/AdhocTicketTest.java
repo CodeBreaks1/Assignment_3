@@ -92,4 +92,38 @@ class AdhocTicketTest {
         boolean state = testAdhoc.isCurrent();
         assertTrue(state);
     }
+    @Test
+    void trypayParameters() {
+        logger.log(Level.INFO, "Testing pay method parameters");
+        when(testAdhoc.getCharge()).thenReturn(4.5F);
+        when(testAdhoc.getPaidDateTime()).thenReturn(4L);
+        assertEquals(4.5F, testAdhoc.getCharge());
+        assertEquals(4L, testAdhoc.getPaidDateTime());
+
+
+    }
+
+
+    @Test
+    void isPaid() {
+        logger.log(Level.INFO, "Test isPaid method");
+        when(testAdhoc.isCurrent()).thenReturn(true);
+        assertEquals(true, testAdhoc.isCurrent());
+
+    }
+
+    @Test
+    void getCharge() {
+        logger.log(Level.INFO, "Test getCharge method");
+        when(testAdhoc.getCharge()).thenReturn(4.5F);
+        assertEquals(4.5F, testAdhoc.getCharge());
+    }
+
+    @Test
+    void tryExitMethod() {
+        logger.log(Level.INFO, "Test exit method");
+        testAdhoc.exit(5L);
+        verify(testAdhoc).exit(5L);
+    }
+
 }
