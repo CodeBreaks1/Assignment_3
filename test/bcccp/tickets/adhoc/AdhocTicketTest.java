@@ -25,4 +25,14 @@ class AdhocTicketTest {
 
     }
 
+    @Test
+    void testRuntimeExceptioWhenGetInvalidTicketNo() {
+        logger.log(Level.INFO, "Testing ticket number");
+        testAdhoc.getTicketNo();
+        Throwable exception = assertThrows(RuntimeException.class, () -> {
+            throw new RuntimeException("Error");
+        });
+        assertEquals("Error", exception.getMessage());
+
+    }
 }
