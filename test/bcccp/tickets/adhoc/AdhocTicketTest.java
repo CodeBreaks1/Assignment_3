@@ -16,5 +16,13 @@ class AdhocTicketTest {
         testAdhoc = mock(AdhocTicket.class);
         idao = spy(new AdhocTicketDAO(new AdhocTicketFactory()));
     }
+    
+    @AfterEach
+    void after() {
+
+        testAdhoc = mock(AdhocTicket.class);
+        idao = spy(new AdhocTicketDAO(new AdhocTicketFactory()));
+
+    }
 
 }
