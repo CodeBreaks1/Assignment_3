@@ -152,4 +152,6 @@ public class AdhocTicket implements IAdhocTicket {
         return id > 0;
     }
 
+    //Fixing tests
+
 }
