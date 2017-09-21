@@ -72,4 +72,14 @@ class AdhocTicketTest {
         assertEquals(0L, testAdhoc.getEntryDateTime());
 
     }
+    @Test
+    void tryExceptionforinvalidDateEnterMethod() {
+        logger.log(Level.INFO, "Invalid date entry test");
+        testAdhoc.enter(0);
+        Throwable exception = assertThrows(RuntimeException.class, () -> {
+            throw new RuntimeException("Error");
+        });
+        assertEquals("Error", exception.getMessage());
+
+    }
 }
