@@ -82,4 +82,14 @@ class AdhocTicketTest {
         assertEquals("Error", exception.getMessage());
 
     }
+    @Test
+
+    void tryisCurrentState() {
+        logger.log(Level.INFO, "isCurrentState method state test");
+        String entryStrDate = "02042013053542"; // "02-04-2013 05:35:42"
+        testAdhoc = new AdhocTicket("Flinders Lane", 34, generateBarCode(34, entryStrDate));
+        testAdhoc.enter(testAdhoc.getEntryDateTime());
+        boolean state = testAdhoc.isCurrent();
+        assertTrue(state);
+    }
 }
