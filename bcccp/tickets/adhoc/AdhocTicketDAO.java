@@ -27,6 +27,7 @@ public class AdhocTicketDAO  implements IAdhocTicketDAO  {
 		IAdhocTicket ticket = adhocTicketFactory_.make(carparkId, ++currentTicketNo);
 		currentTickets.put(ticket.getBarcode(), ticket);
 		return ticket;	
+		//Adding some more features after testing
 	}
 	
 	
