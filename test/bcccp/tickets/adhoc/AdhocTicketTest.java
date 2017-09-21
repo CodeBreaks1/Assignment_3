@@ -56,4 +56,13 @@ class AdhocTicketTest {
         });
         assertEquals("Error", exception.getMessage());
     }
+
+    @Test
+    void tryenterEntryDate() {
+        logger.log(Level.INFO, "Test EntryDate");
+        testAdhoc.enter(0L);
+        verify(testAdhoc).enter(0L);
+        assertEquals(testAdhoc.getEntryDateTime(), 0L);
+
+    }
 }
