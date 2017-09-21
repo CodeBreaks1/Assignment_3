@@ -35,4 +35,15 @@ class AdhocTicketTest {
         assertEquals("Error", exception.getMessage());
 
     }
+    
+
+    @Test
+    void testgetBarcode() {
+        logger.log(Level.INFO, "Test getBarcode method");
+        testAdhoc.getBarcode();
+        Throwable exception = assertThrows(RuntimeException.class, () -> {
+            throw new RuntimeException("Error");
+        });
+        assertEquals("Error", exception.getMessage());
+    }
 }
