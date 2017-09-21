@@ -21,7 +21,7 @@ public class AdhocTicket implements IAdhocTicket {
 		this.carparkId_ = carparkId;
 		this.ticketNo_ = ticketNo;
 		this.barcode = barcode;
-		this.state_ = STATE.ISSUED;		
+		this.state_ = STATE.ISSUED;
 	}
 
 	
