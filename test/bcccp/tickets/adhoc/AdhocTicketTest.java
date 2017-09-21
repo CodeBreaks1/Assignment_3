@@ -65,4 +65,11 @@ class AdhocTicketTest {
         assertEquals(testAdhoc.getEntryDateTime(), 0L);
 
     }
+    @Test
+    void getEntryDateTime() {
+        logger.log(Level.INFO, "Testing entry date");
+        when(testAdhoc.getEntryDateTime()).thenReturn(0L);
+        assertEquals(0L, testAdhoc.getEntryDateTime());
+
+    }
 }
