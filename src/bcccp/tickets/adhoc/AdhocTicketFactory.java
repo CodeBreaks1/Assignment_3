@@ -31,5 +31,10 @@ public class AdhocTicketFactory implements IAdhocTicketFactory {
 
         return prefix + "\u002D" + hexNum + "\u002D" + hexDate;
     }
+    public static String toHexadecimal(String text) throws UnsupportedEncodingException {
+        byte[] myBytes = text.getBytes("UTF-16");
+
+        return DatatypeConverter.printHexBinary(myBytes);
+    }
 
 }
