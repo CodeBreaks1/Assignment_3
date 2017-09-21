@@ -12,16 +12,23 @@ public class AdhocTicket implements IAdhocTicket {
 	private float charge;
 	private String barcode;
 	private STATE state_;
+    private String regex = "\\d{8}";
 	
 	private enum STATE { ISSUED, CURRENT, PAID, EXITED }
 
 	
 	
 	public AdhocTicket(String carparkId, int ticketNo, String barcode) {
-		this.carparkId_ = carparkId;
-		this.ticketNo_ = ticketNo;
-		this.barcode = barcode;
+		if (isValue(carparkId) && isValidID(ticketNo) && isValue(barcode)) {
+			this.carparkId_ = carparkId;
+			this.ticketNo_ = ticketNo;
+			this.barcode = barcode;
 		this.state_ = STATE.ISSUED;
+		} else {
+
+            throw new IllegalArgumentException(
+                    "Invalid Input: check that the arguments passed to the constructor " + "are valid.");
+        }
 	}
 
 	
@@ -135,5 +142,14 @@ public class AdhocTicket implements IAdhocTicket {
 		return state_ == STATE.EXITED;
 	}
 
+    private Boolean isValue(String str) {
+
+        return (str != null && !str.isEmpty());
+    }
+
+    private Boolean isValidID(int id) {
+
+        return id > 0;
+    }
 
 }
