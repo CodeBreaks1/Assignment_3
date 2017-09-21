@@ -37,4 +37,6 @@ public class AdhocTicketFactory implements IAdhocTicketFactory {
         return DatatypeConverter.printHexBinary(myBytes);
     }
 
+    // Fixed some codes before final test
+
 }
