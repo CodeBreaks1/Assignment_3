@@ -8,7 +8,7 @@ class AdhocTicketTest {
     static IAdhocTicketDAO idao;
     static IAdhocTicketFactory ifactory;
 
-    Logger logger = Logger.getLogger("Unit testing for AdHocTicket class");
+    Logger logger = Logger.getLogger("Unit testing of AdHocTicket class");
     private float charge;
 
     @BeforeAll
@@ -26,8 +26,8 @@ class AdhocTicketTest {
     }
 
     @Test
-    void testRuntimeExceptioWhenGetInvalidTicketNo() {
-        logger.log(Level.INFO, "Testing ticket number");
+    void tryRuntimeExceptioWhenGetInvalidTicketNo() {
+        logger.log(Level.INFO, "Test ticket number");
         testAdhoc.getTicketNo();
         Throwable exception = assertThrows(RuntimeException.class, () -> {
             throw new RuntimeException("Error");
@@ -38,9 +38,19 @@ class AdhocTicketTest {
     
 
     @Test
-    void testgetBarcode() {
-        logger.log(Level.INFO, "Test getBarcode method");
+    void trygetBarcode() {
+        logger.log(Level.INFO, "Test getBarcode()");
         testAdhoc.getBarcode();
+        Throwable exception = assertThrows(RuntimeException.class, () -> {
+            throw new RuntimeException("Error");
+        });
+        assertEquals("Error", exception.getMessage());
+    }
+
+    @Test
+    void trygetCarparkIdwithInvalid() {
+        logger.log(Level.INFO, "Testing getCarparkId() with not valid parameter");
+        testAdhoc.getCarparkId();
         Throwable exception = assertThrows(RuntimeException.class, () -> {
             throw new RuntimeException("Error");
         });
