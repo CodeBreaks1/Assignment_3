@@ -126,4 +126,17 @@ class AdhocTicketTest {
         verify(testAdhoc).exit(5L);
     }
 
+    @Test
+    void getExitDateTime() {
+        logger.log(Level.INFO, "Test Exit method");
+        when(testAdhoc.getExitDateTime()).thenReturn(5L);
+        assertEquals(5L, testAdhoc.getExitDateTime());
+    }
+
+    @Test
+    void tryhasExitedMethod() {
+        logger.log(Level.INFO, "Test hasExit method");
+        when(testAdhoc.hasExited()).thenReturn(true);
+        assertTrue(testAdhoc.hasExited());
+    }
 }
