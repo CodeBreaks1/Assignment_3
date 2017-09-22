@@ -16,7 +16,8 @@ public class AdhocTicketDAO  implements IAdhocTicketDAO  {
 	
 	public AdhocTicketDAO(IAdhocTicketFactory adhocTicketFactory) {
 		this.adhocTicketFactory_ = adhocTicketFactory;
-		currentTickets = new HashMap<>();		
+		currentTickets = new HashMap<>();
+		//Adding some more features after testing..
 	}
 
 	
@@ -26,6 +27,7 @@ public class AdhocTicketDAO  implements IAdhocTicketDAO  {
 		IAdhocTicket ticket = adhocTicketFactory_.make(carparkId, ++currentTicketNo);
 		currentTickets.put(ticket.getBarcode(), ticket);
 		return ticket;	
+		//Adding some more features after testing..
 	}
 	
 	
@@ -33,6 +35,7 @@ public class AdhocTicketDAO  implements IAdhocTicketDAO  {
 	@Override
 	public IAdhocTicket findTicketByBarcode(String barcode) {
 		return currentTickets.get(barcode);
+		//Adding some more features after testing..
 	}	
 
 	
@@ -40,6 +43,7 @@ public class AdhocTicketDAO  implements IAdhocTicketDAO  {
 	@Override
 	public List<IAdhocTicket> getCurrentTickets() {		
 		return Collections.unmodifiableList(new ArrayList<IAdhocTicket>(currentTickets.values()));
+		//Adding some more features after testing.....
 	}
 
 
