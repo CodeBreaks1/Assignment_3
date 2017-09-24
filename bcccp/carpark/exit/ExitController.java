@@ -15,6 +15,7 @@ public class ExitController
 		implements ICarSensorResponder,
 		           IExitController {
 	
+				   
 	private enum STATE { IDLE, WAITING, PROCESSED, REJECTED, TAKEN, EXITING, EXITED, BLOCKED } 
 	
 	private STATE state;
