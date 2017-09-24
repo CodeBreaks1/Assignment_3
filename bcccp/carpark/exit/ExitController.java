@@ -27,6 +27,7 @@ public class ExitController
 	//private String prevMessage;
 				   
 	
+				   
 	private IGate exitGate;
 	private ICarSensor is;
 	private ICarSensor os; 
