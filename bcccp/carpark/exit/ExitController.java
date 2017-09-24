@@ -10,6 +10,7 @@ package bcccp.carpark.exit;
   import bcccp.tickets.adhoc.IAdhocTicket;
 
 
+
 public class ExitController 
 		implements ICarSensorResponder,
 		           IExitController {
@@ -20,7 +21,9 @@ public class ExitController
 	private STATE prevState;
 	private String message;
 				   
+				   
 	//private String prevMessage;
+				   
 	
 	private IGate exitGate;
 	private ICarSensor is;
