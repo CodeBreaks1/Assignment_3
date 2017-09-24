@@ -32,6 +32,7 @@ public class ExitController
 	private ICarSensor os; 
 	private IExitUI ui;
 	
+				   
 	private ICarpark carpark;
 	private IAdhocTicket  adhocTicket = null;
 	private long exitTime;
