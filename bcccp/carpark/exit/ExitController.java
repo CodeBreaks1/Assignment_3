@@ -16,6 +16,7 @@ package bcccp.carpark.exit;
 public class ExitController 
 		implements ICarSensorResponder,
 		           IExitController {
+				   
 	
 				   
 	private enum STATE { IDLE, WAITING, PROCESSED, REJECTED, TAKEN, EXITING, EXITED, BLOCKED } 
