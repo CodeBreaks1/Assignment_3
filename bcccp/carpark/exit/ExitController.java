@@ -31,6 +31,7 @@ public class ExitController
 				   
 	
 				   
+				   
 	private IGate exitGate;
 	private ICarSensor is;
 	private ICarSensor os; 
