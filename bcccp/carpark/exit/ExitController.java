@@ -51,6 +51,7 @@ public class ExitController
 			IExitUI ui) {
 		
 		
+		
 		this.carpark = carpark;
 		this.exitGate = exitGate;
 		this.is = is;
